@@ -1,0 +1,9 @@
+package pizzaspatterns;
+
+
+public abstract class Pizza 
+{
+    public abstract String listaDePizzas();
+    
+    public abstract String sabor();
+}
