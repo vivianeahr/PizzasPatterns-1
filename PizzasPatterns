@@ -1,0 +1,16 @@
+
+package pizzaspatterns;
+
+
+public class PizzasPatterns {
+
+ 
+    public static void main(String[] args) 
+    {
+        Singleton pizzas = new Singleton.getInstance();
+        System.out.println(pizzas.FazerPizzaBrasileira());
+        System.out.println(pizzas.FazerPizzaMexicana());
+      
+       
+    }
+}
