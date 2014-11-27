@@ -1,0 +1,54 @@
+package pizzaspatterns;
+
+
+public class Singleton extends Pizza
+{
+   private static Singleton instancia;
+   
+   protected Singleton(){}
+
+    public static Singleton getIntancia()
+    {
+        if(instancia == null)
+        instancia = new Singleton();
+        
+        return instancia;
+    }
+    
+     
+     protected int totalBrasileira;
+     protected int totalMexicana;
+    
+    public String FazerPizzaBrasileira()
+    {
+        return new String("Pizza Brasileira pronta" +totalBrasileira);
+    }
+    
+    public String FazerPizzaMexicana()
+    {
+        return new String("Pizza Mexicana pronta" +totalBrasileira);
+    }
+    
+   
+    @Override
+    public String listaDePizzas() 
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String sabor()
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+
+    static class getInstance extends Singleton 
+    {
+
+        public getInstance()
+        {}
+    }
+   
+}
