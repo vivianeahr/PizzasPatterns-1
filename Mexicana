@@ -1,0 +1,38 @@
+package pizzaspatterns;
+
+
+public class Mexicana extends Pizza 
+{
+    private static Mexicana mexicana;
+    
+    private Double numero1;
+    private Double numero2;
+    
+    private Mexicana(){}
+    
+    public static Mexicana mexicana()
+    {
+        if(mexicana == null)
+        {
+            mexicana= new Mexicana();
+        }
+        return mexicana;
+    }
+
+    @Override
+    public String listaDePizzas() 
+    {
+        return "Molho, mussarela, calabresa, cebola, pimenta e orégano.";
+    }
+
+    @Override
+    public String sabor() 
+    {
+        return "Mexicana";
+    }
+
+    public double preco(Double numero1, Double numero2)
+    {
+        return numero1 + numero2;
+    }
+}
