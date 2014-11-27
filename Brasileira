@@ -1,0 +1,38 @@
+package pizzaspatterns;
+
+
+public class Brasileira extends Pizza 
+{
+    private static Brasileira  brasileira ;
+    private Double numero1;
+    private Double numero2;
+    
+    private Brasileira()
+    {}
+    
+    public static Brasileira  brasileira ()
+    {
+        if(brasileira  == null)
+        {
+          brasileira  = new Brasileira ();
+        }
+        return brasileira ;
+    }
+
+    @Override
+    public String listaDePizzas() 
+    {
+        return "Molho, mussarela, milho, ervilha e orégano.";
+    }
+
+    @Override
+    public String sabor() 
+    {
+        return "Brasileira";
+    }
+
+    public double preco(Double numero1, Double numero2)
+    {
+        return numero1 + numero2;
+    }
+}
